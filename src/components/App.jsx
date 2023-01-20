@@ -29,7 +29,7 @@ export class App extends Component {
       return 0;
     }
     const percentage = (good / total) * 100;
-    return percentage.toFixed(2);
+    return Number(percentage.toFixed(2));
   }
 
   render() {

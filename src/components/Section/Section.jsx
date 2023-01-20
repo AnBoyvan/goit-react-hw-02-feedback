@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Statistics } from '../Statistics/Statistics';
 import { FeedbackOptions } from '../FeedbackOptions/FeedbackOptions';
 import css from '../Section/Section.module.css';
@@ -25,4 +26,15 @@ export const Section = ({
       />
     </section>
   );
+};
+
+Section.propTypes = {
+  title: PropTypes.string.isRequired,
+  options: PropTypes.object.isRequired,
+  onLeaveFeedback: PropTypes.func.isRequired,
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
+  total: PropTypes.number.isRequired,
+  positivePercentage: PropTypes.number.isRequired,
 };
