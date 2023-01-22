@@ -49,14 +49,3 @@ export class App extends Component {
     );
   }
 }
-// <FeedbackOptions
-//   options={this.state}
-//   onLeaveFeedback={this.handleVote}
-// />
-// <Statistics
-//   good={good}
-//   neutral={neutral}
-//   bad={bad}
-//   total={this.countTotalFeedback()}
-//   positivePercentage={this.countPositiveFeedbackPercentage()}
-// />
