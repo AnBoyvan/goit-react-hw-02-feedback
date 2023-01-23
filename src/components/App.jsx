@@ -38,14 +38,15 @@ export class App extends Component {
       <Section title="Please leave the feedback">
         <FeedbackOptions options={this.state} onLeaveFeedback={this.addVote} />
         <h4 className={css.title}>Statistic</h4>
-        {total !== 0 && (
+        {total !== 0 ? (
           <Statistics
             options={this.state}
             total={this.countTotalFeedback()}
             positivePercentage={this.countPositiveFeedbackPercentage()}
-          ></Statistics>
+          />
+        ) : (
+          <Notification message="There is no feedback" />
         )}
-        {total === 0 && <Notification message="There is no feedback" />}
       </Section>
     );
   }
